@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Style the body */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Sans", sans-serif;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Style the quiz container */
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #668caa;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.quiz-container {
+   margin-top: 63px;
+    display: flex;
+    justify-content: space-between; /* To space the quiz content and image */
+    align-items: flex-start; /* To align items at the top */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.quiz-content {
+    width: 70%; /* Adjust the width of the quiz content */
+}
+
+.image-container {
+    width: 25%; /* Adjust the width of the image container */
+}
+/* Style the question */
+.question {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style the options */
+.option-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #e9ecef;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.option-btn:hover {
+  background-color: #dee2e6;
+}
+
+/* Style the correct option */
+.correct {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* Style the incorrect option */
+.incorrect {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Style the submit button */
+#next-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#next-button:hover {
+  background-color: #0056b3;
+}
+
+/* Style the quiz result */.heading-txt {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.level-selection {
+  margin-bottom: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+#question-number {
+  font-weight: bold;
+}
+
+.option-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.option-btn.correct {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.option-btn.incorrect {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+#next-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#next-button:disabled {
+  background-color: #8ab6dd;
+  cursor: not-allowed;
+}
+.heading-txt{
+  color: #333;
+   font-family: "Fira Sans", sans-serif;
+   font-size: 40px;
+}
+/* Quiz.css */
+
+/* Style the level selection dropdown */
+.level-selection select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e6e6e6;
+  color: #333;
+  cursor: pointer;
+}
+
+
+/* Style the level selection dropdown options */
+.level-selection select option {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Style the level button container */
+.level-details {
+  margin-top: 10px;
+}
+
+/* Style the level button */
+.level-details p {
+  font-size: 16px;
+  color: #ffffff;
+}
+.image-container{
+ margin-top: 0%;
+ width: 700px;
+ margin-right: 14px;
+}
+footer {
+
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fdfbfb; /* Background color for the footer */
+  color: #000000; /* Text color for the copyright notice */
+  padding: 10px 0; /* Add some padding for spacing */
+  text-align: center; /* Center-align the text */
+}
+
+@media (max-width: 768px) {
+  .quiz-container {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: center; /* Center align items */
   }
-  to {
-    transform: rotate(360deg);
+
+  .quiz-content,
+  .image-container {
+      width: 100%; /* Full width on smaller screens */
   }
 }
